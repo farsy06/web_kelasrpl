@@ -15,8 +15,8 @@ Web Kelas RPL adalah website yang dibuat untuk memudahkan siswa untuk mengelola 
 ## Teknologi yang digunakan
 
 - Laravel 12
-- Tailwind CSS v3.4.17
-- Vite v6.2.4
+- Tailwind CSS v3.4.17 _(via CDN)_
+- ~~Vite v6.2.4~~ _(tidak digunakan)_
 
 ## Cara Menggunakan
 
