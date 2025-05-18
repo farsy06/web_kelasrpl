@@ -15,7 +15,7 @@
             @if($student->role === 'student')
             <a data-aos="fade-up" data-aos-delay="100" href="{{ route('students.show', $student->id) }}"
                 class="bg-white hover:bg-[#bb0000] shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 group">
-                <img src="{{ $student->profile_pic ?? 'https://randomuser.me/api/portraits/men/32.jpg' }}" alt="{{ $student->full_name }}"
+                <img src="{{ $student->profile_pic ?? asset('images/user.png') }}" alt="{{ $student->full_name }}"
                     class="w-full h-48 object-cover transition duration-300 transform group-hover:-translate-y-1 group-hover:scale-105">
                 <div class="p-4">
                     <h3 class="text-xl font-semibold text-gray-800 group-hover:text-white transition">{{ $student->full_name }}</h3>

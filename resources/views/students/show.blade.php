@@ -8,7 +8,7 @@
             <!-- Background Red -->
             <div class="absolute -top-2 -left-2 w-full h-full bg-[#bb0000] rounded-lg transform rotate-6 z-0"></div>
             <!-- Profile Picture -->
-            <img src="{{ $student->profile_pic ?? 'https://randomuser.me/api/portraits/men/32.jpg' }}"
+            <img src="{{ $student->profile_pic ?? asset('images/user.png') }}"
                 alt="{{ $student->full_name }}"
                 class="relative z-10 w-40 md:w-52 lg:w-60 rounded-lg object-cover">
     </div>
@@ -22,7 +22,7 @@
             <div><span class="font-semibold">No. HP:</span> {{ $student->phone }}</div>
             <div><span class="font-semibold">Email:</span> {{ $student->email }}</div>
             <div><span class="font-semibold">Username:</span> {{ $student->username }}</div>
-            <div><span class="font-semibold">Kelas:</span> {{ $student->grade }}</div>
+            <div><span class="font-semibold">Kelas:</span> XI RPL 1</div>
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 mt-6 text-[#bb0000] text-2xl">
