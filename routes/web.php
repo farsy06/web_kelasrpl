@@ -15,13 +15,13 @@ Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
 
-Route::get('/student', function () {
-    return view('student');
-})->name('student');
-
 Route::get('/event', function () {
     return view('event');
 })->name('event');
+
+// Students Routes
+Route::get('/students', [\App\Http\Controllers\StudentsController::class, 'index'])->name('students.index');
+Route::get('/students/{student}', [\App\Http\Controllers\StudentsController::class, 'show'])->name('students.show');
 
 // Authentication Routes
 Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');

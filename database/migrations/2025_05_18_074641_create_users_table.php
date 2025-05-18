@@ -16,10 +16,10 @@ return new class extends Migration
             $table->date('birthday')->nullable();
             $table->text('bio')->nullable();
             $table->string('username');
-            $table->string('grade')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'user'])->default('user');
+            $table->enum('role', ['admin', 'student', 'public'])->default('public');
             $table->integer('nis')->nullable();
+            $table->integer('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
