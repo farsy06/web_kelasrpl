@@ -13,7 +13,7 @@ class LoginRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -39,9 +39,16 @@ class LoginRequest extends FormRequest
      */
     public function authenticate()
     {
-        $credentials = $this->validated();
+        // Get validated credentials but exclude remember
+        $credentials = [
+            'email' => $this->input('email'),
+            'password' => $this->input('password')
+        ];
         
-        if (!Auth::attempt($credentials, $credentials['remember'])) {
+        // Get remember value from the request - safely convert to boolean
+        $remember = filter_var($this->input('remember', false), FILTER_VALIDATE_BOOLEAN);
+        
+        if (!Auth::attempt($credentials, $remember)) {
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
             ]);

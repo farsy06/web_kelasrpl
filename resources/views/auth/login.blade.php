@@ -38,7 +38,7 @@
                     </div>
                     
                     <div class="flex items-center">
-                        <input type="checkbox" name="remember" id="remember" class="rounded border-gray-300 text-[#bb0000] focus:ring-[#bb0000]" {{ old('remember') ? 'checked' : '' }}>
+                        <input type="checkbox" name="remember" id="remember" value="1" class="rounded border-gray-300 text-[#bb0000] focus:ring-[#bb0000]" {{ old('remember') ? 'checked' : '' }}>
                         <label for="remember" class="ml-2 text-sm text-gray-600">Ingat saya</label>
                     </div>
                     

@@ -29,12 +29,12 @@
             <div class="flex items-center space-x-2">
                 @auth
                     <div class="flex items-center space-x-2">
-                        <a href="{{ route('profile') }}" class="text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
+                        <a href="{{ route('profile') }}" class="bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
                             Profile
                         </a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
+                            <button type="submit" class="text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
                                 Logout
                             </button>
                         </form>
