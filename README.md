@@ -35,9 +35,9 @@ Web Kelas RPL adalah website yang dibuat untuk memudahkan siswa untuk mengelola 
 
 ## Author
 
-- [farsy06](https://github.com/farsy06)
-- [CodeMaster-D](https://github.com/CodeMaster-D)
-- [FR156](https://github.com/FR156)
+- [farsy06](https://github.com/farsy06) - Project Maintainer, Backend Developer
+- [CodeMaster-D](https://github.com/CodeMaster-D) - Frontend Developer
+- [FR156](https://github.com/FR156) - Frontend Developer
 
 ## Screenshot
 
