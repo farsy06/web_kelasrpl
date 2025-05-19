@@ -19,7 +19,7 @@
                     class="w-full h-48 object-cover transition duration-300 transform group-hover:-translate-y-1 group-hover:scale-105">
                 <div class="p-4">
                     <h3 class="text-xl font-semibold text-gray-800 group-hover:text-white transition">{{ $student->full_name }}</h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white">{{ $student->grade }} • {{ $student->bio ?? 'Student' }}</p>
+                    <p class="text-sm text-gray-600 group-hover:text-white">XI RPL 1 • {{ $student->bio ?? 'Student' }}</p>
                     <div class="mt-2 text-xs text-gray-400 group-hover:text-white">NIS: {{ $student->nis }}</div>
                 </div>
             </a>
