@@ -16,12 +16,18 @@
                     <a href="{{ route('profile') }}" class="bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
                         Profile
                     </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
-                            Logout
-                        </button>
-                    </form>
+                    @if(auth()->user()->role === 'admin')
+                        <a href="{{ route('admin.index') }}" class="text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
+                            Dashboard
+                        </a>
+                    @else
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
+                                Logout
+                            </button>
+                        </form>
+                    @endif
                 </div>
             @else
                 <a href="{{ route('login') }}" class="bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
@@ -72,12 +78,18 @@
                     <a href="{{ route('profile') }}" class="block w-full text-center text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
                         Profile
                     </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="block w-full text-center bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
-                            Logout
-                        </button>
-                    </form>
+                    @if(auth()->user()->role === 'admin')
+                        <a href="{{ route('admin.index') }}" class="block w-full text-center text-red-600 hover:text-red-700 transition outline outline-1 outline-red-600 px-3 py-2 rounded-full text-base font-medium">
+                            Dashboard
+                        </a>
+                    @else
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="block w-full text-center bg-red-600 text-white px-3 py-2 rounded-full text-base font-medium hover:bg-red-700 transition">
+                                Logout
+                            </button>
+                        </form>
+                    @endif
                 </div>
             </div>
             @else

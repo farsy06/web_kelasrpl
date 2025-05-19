@@ -25,36 +25,41 @@
             <div><span class="font-semibold">Kelas:</span> XI RPL 1</div>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-4 mt-6 text-[#bb0000] text-2xl">
-            @if($sosmed && $sosmed->whatsapp)
-                <a href="{{ $sosmed->whatsapp }}" class="hover:text-red-700 transition" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            @endif
-            @if($sosmed && $sosmed->instagram)
-                <a href="{{ $sosmed->instagram }}" class="hover:text-red-700 transition" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            @endif
-            @if($sosmed && $sosmed->tiktok)
-                <a href="{{ $sosmed->tiktok }}" class="hover:text-red-700 transition" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            @endif
-            @if($sosmed && $sosmed->linkedin)
-                <a href="{{ $sosmed->linkedin }}" class="hover:text-red-700 transition" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            @endif
-            @if($sosmed && $sosmed->facebook)
-                <a href="{{ $sosmed->facebook }}" class="hover:text-red-700 transition" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            @endif
-            @if($sosmed && $sosmed->youtube)
-                <a href="{{ $sosmed->youtube }}" class="hover:text-red-700 transition" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            @endif
-            @if($sosmed && $sosmed->reddit)
-                <a href="{{ $sosmed->reddit }}" class="hover:text-red-700 transition" target="_blank" title="Reddit"><i class="fab fa-reddit"></i></a>
-            @endif
-            @if($sosmed && $sosmed->x)
-                <a href="{{ $sosmed->x }}" class="hover:text-red-700 transition" target="_blank" title="X"><i class="fab fa-x"></i></a>
-            @endif
-            @if($sosmed && $sosmed->discord)
-                <a href="{{ $sosmed->discord }}" class="hover:text-red-700 transition" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-            @endif
-            @if($sosmed && $sosmed->github)
-                <a href="{{ $sosmed->github }}" class="hover:text-red-700 transition" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+            <div class="flex flex-wrap justify-center gap-4 text-[#bb0000] text-2xl">
+                @if(optional($sosmed)->whatsapp)
+                    <a href="{{ optional($sosmed)->whatsapp }}" class="hover:text-red-700 transition" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                @endif
+                @if(optional($sosmed)->instagram)
+                    <a href="{{ optional($sosmed)->instagram }}" class="hover:text-red-700 transition" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                @endif
+                @if(optional($sosmed)->tiktok)
+                    <a href="{{ optional($sosmed)->tiktok }}" class="hover:text-red-700 transition" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                @endif
+                @if(optional($sosmed)->linkedin)
+                    <a href="{{ optional($sosmed)->linkedin }}" class="hover:text-red-700 transition" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                @endif
+                @if(optional($sosmed)->facebook)
+                    <a href="{{ optional($sosmed)->facebook }}" class="hover:text-red-700 transition" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                @endif
+                @if(optional($sosmed)->youtube)
+                    <a href="{{ optional($sosmed)->youtube }}" class="hover:text-red-700 transition" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                @endif
+                @if(optional($sosmed)->reddit)
+                    <a href="{{ optional($sosmed)->reddit }}" class="hover:text-red-700 transition" target="_blank" title="Reddit"><i class="fab fa-reddit"></i></a>
+                @endif
+                @if(optional($sosmed)->x)
+                    <a href="{{ optional($sosmed)->x }}" class="hover:text-red-700 transition" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+                @endif
+                @if(optional($sosmed)->discord)
+                    <a href="{{ optional($sosmed)->discord }}" class="hover:text-red-700 transition" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                @endif
+                @if(optional($sosmed)->github)
+                    <a href="{{ optional($sosmed)->github }}" class="hover:text-red-700 transition" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                @endif
+            </div>
+            @if(auth()->check() && auth()->id() == $student->id)
+                <a href="{{ route('students.edit', $student->id) }}" class="bg-[#bb0000] text-white px-4 py-1 rounded-full hover:bg-gray-800 transition">Edit Profile</a>
             @endif
         </div>
     </div>
