@@ -21,6 +21,11 @@ class LoginController extends Controller
         
         Session::regenerate();
         
+        // Check user role and redirect accordingly
+        if (Auth::user()->role === 'admin') {
+            return redirect()->route('admin.index');
+        }
+        
         return redirect()->intended('/');
     }
 

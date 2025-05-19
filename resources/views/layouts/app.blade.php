@@ -48,9 +48,9 @@
             <p>&copy; 2025 XI - RPL. All rights reserved.</p>
         </div>
     </div>
-</footer>
+    </footer>
 
-@stack('scripts')
-<script src="{{ asset('js/mobile-menu.js') }}"></script>
+    @stack('scripts')
+    <script src="{{ asset('js/sidebar-toggle.js') }}"></script>
 </body>
 </html>

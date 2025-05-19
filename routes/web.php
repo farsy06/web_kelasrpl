@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 // Public Routes
 Route::get('/', function () {
@@ -40,4 +41,17 @@ Route::post('/password/reset', [\App\Http\Controllers\Auth\ResetPasswordControll
 // Protected Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile');
+});
+
+// Admin Routes
+Route::prefix('admin')->middleware([
+    \Illuminate\Auth\Middleware\Authenticate::class,
+    \App\Http\Middleware\AdminMiddleware::class
+])->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/content', [AdminController::class, 'content'])->name('admin.content');
+    Route::get('/account', [AdminController::class, 'account'])->name('admin.account');
+    Route::get('/account/{user}/edit', [AdminController::class, 'edit'])->name('admin.account.edit');
+    Route::put('/account/{user}', [AdminController::class, 'update'])->name('admin.account.update');
+    Route::delete('/account/{user}', [AdminController::class, 'destroy'])->name('admin.account.delete');
 });

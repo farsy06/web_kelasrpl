@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Karya extends Model
+class Content extends Model
 {
     use HasFactory;
 
@@ -22,6 +22,7 @@ class Karya extends Model
 
     protected $casts = [
         'uploaded_at' => 'datetime',
+        'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
 
