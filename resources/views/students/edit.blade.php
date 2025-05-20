@@ -72,6 +72,69 @@
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">{{ old('bio', $student->bio) }}</textarea>
             </div>
 
+            <h2 class="text-2xl font-bold mb-6 space-y-6">Social Media Links</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">WhatsApp</label>
+                    <input type="url" name="whatsapp" value="{{ old('whatsapp', optional($sosmed)->whatsapp ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-600 focus:ring-red-600">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Instagram</label>
+                    <input type="url" name="instagram" value="{{ old('instagram', optional($sosmed)->instagram ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">TikTok</label>
+                    <input type="url" name="tiktok" value="{{ old('tiktok', optional($sosmed)->tiktok ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">LinkedIn</label>
+                    <input type="url" name="linkedin" value="{{ old('linkedin', optional($sosmed)->linkedin ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Facebook</label>
+                    <input type="url" name="facebook" value="{{ old('facebook', optional($sosmed)->facebook ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">YouTube</label>
+                    <input type="url" name="youtube" value="{{ old('youtube', optional($sosmed)->youtube ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Reddit</label>
+                    <input type="url" name="reddit" value="{{ old('reddit', optional($sosmed)->reddit ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">X</label>
+                    <input type="url" name="x" value="{{ old('x', optional($sosmed)->x ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Discord</label>
+                    <input type="url" name="discord" value="{{ old('discord', optional($sosmed)->discord ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">GitHub</label>
+                    <input type="url" name="github" value="{{ old('github', optional($sosmed)->github ?? '') }}"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
+                </div>
+            </div>
+
             <div class="flex justify-end gap-4">
                 <a href="{{ url()->previous() }}" class="outline outline-1 outline-red-600 text-red-600 hover:text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
                     Back
@@ -86,86 +149,7 @@
                     Save Changes
                 </button>
             </div>
-        </form> 
+        </form>
     </div>
-</section>
-
-<!-- Divider with Background -->
-<div class="bg-[#bb0000] h-24 w-full flex items-center justify-center text-white"></div>
-
-<!-- Social Media Section -->
-<section class="w-full px-12 py-12">
-    <h2 class="text-2xl font-bold mb-6">Social Media Links</h2>
-    <form action="{{ route('students.update', $student->id) }}" method="POST" class="space-y-6">
-        @csrf
-        @method('PUT')
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-                <label class="block text-sm font-medium text-gray-700">WhatsApp</label>
-                <input type="url" name="whatsapp" value="{{ old('whatsapp', optional($sosmed)->whatsapp ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-600 focus:ring-red-600">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Instagram</label>
-                <input type="url" name="instagram" value="{{ old('instagram', optional($sosmed)->instagram ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">TikTok</label>
-                <input type="url" name="tiktok" value="{{ old('tiktok', optional($sosmed)->tiktok ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">LinkedIn</label>
-                <input type="url" name="linkedin" value="{{ old('linkedin', optional($sosmed)->linkedin ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Facebook</label>
-                <input type="url" name="facebook" value="{{ old('facebook', optional($sosmed)->facebook ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">YouTube</label>
-                <input type="url" name="youtube" value="{{ old('youtube', optional($sosmed)->youtube ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Reddit</label>
-                <input type="url" name="reddit" value="{{ old('reddit', optional($sosmed)->reddit ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">X</label>
-                <input type="url" name="x" value="{{ old('x', optional($sosmed)->x ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Discord</label>
-                <input type="url" name="discord" value="{{ old('discord', optional($sosmed)->discord ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-            
-            <div>
-                <label class="block text-sm font-medium text-gray-700">GitHub</label>
-                <input type="url" name="github" value="{{ old('github', optional($sosmed)->github ?? '') }}"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#bb0000] focus:ring-[#bb0000]">
-            </div>
-        </div>
-
-        <div class="flex justify-end gap-4">
-            <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700">
-                Save Social Media Links
-            </button>
-        </div>
-    </form>
 </section>
 @endsection
