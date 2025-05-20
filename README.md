@@ -4,44 +4,77 @@ Web Kelas RPL adalah website yang dibuat untuk memudahkan siswa untuk mengelola 
 
 ## Deskripsi
 
-Aplikasi web untuk kelas RPL menggunakan Laravel 12 dengan fitur:
+Aplikasi web untuk kelas RPL menggunakan Laravel 12 dengan fitur-fitur lengkap untuk manajemen karya siswa, event, dan profil pengguna.
 
-- Manajemen profil siswa
-- Sistem login/logout
-- Dashboard admin
-- Sistem event
-- Sosial media integrasi
-- Responsive design
+## Fitur Utama
 
-## Fitur
+- **Autentikasi**
+  - Login
+  - Register
+  - Manajemen profil
 
-- Login
-- Register
-- Dashboard
-- Karya
-- Komentar
-- Sosial Media
-- Profil
+- **Dashboard Admin**
+  - Ringkasan aktivitas
+  - Manajemen siswa
+  - Manajemen event
+  - Statistik pengguna
 
-## Teknologi yang digunakan
+- **Manajemen Karya**
+  - Unggah dan kelola karya
+  - Kategori karya
+  - Komentar dan tanggapan
 
-- Laravel 12
-- PHP 8.2.12
-- Composer 2.8.8
-- Node.js 22.15.1
-- npm 11.3.0
-- MariaDB 10.4.32
-- Tailwind CSS 3.4.17 (via CDN)
-- ~~Vite 6.3.5~~ (tidak digunakan)
+- **Profil Siswa**
+  - Edit profil
+  - Upload foto profil
+  - Manajemen sosial media
+  - Bio
+
+- **Event**
+  - Kalender event
+  - Pendaftaran online
+  - Detail event
+  - Pengingat jadwal
+
+- **Responsive Design**
+  - Desktop
+  - Tablet
+  - Mobile
+
+## Teknologi yang Digunakan
+
+- **Backend**
+  - [Laravel 12](https://laravel.com/)
+  - [PHP 8.2+](https://www.php.net/)
+  - [Composer](https://getcomposer.org/)
+  - [MariaDB](https://mariadb.org/)
+
+- **Frontend**
+  - [Tailwind CSS 3.4.17](https://tailwindcss.com/)
+  - [Node.js 22.x](https://nodejs.org/)
+  - [npm](https://www.npmjs.com/)
+  - ~~Vite 6.3.5~~ (tidak digunakan)
+
+- **Development Tools**
+  - [Git](https://git-scm.com/)
+  - [XAMPP](https://www.apachefriends.org/)
+  - [VS Code](https://code.visualstudio.com/)
 
 ## Persyaratan Sistem
 
-- PHP 8.2 atau lebih tinggi
-- Composer
-- Node.js 22.x atau lebih tinggi
-- MariaDB 10.4 atau lebih tinggi
 - Web Server (Apache/Nginx)
-- Git
+- PHP 8.2 atau lebih tinggi
+- MariaDB 10.4 atau lebih tinggi
+- Ekstensi PHP yang dibutuhkan:
+  - BCMath
+  - Ctype
+  - Fileinfo
+  - JSON
+  - Mbstring
+  - OpenSSL
+  - PDO
+  - Tokenizer
+  - XML
 
 ## Cara Menggunakan
 
@@ -121,29 +154,6 @@ Aplikasi web untuk kelas RPL menggunakan Laravel 12 dengan fitur:
 
 10. Akses aplikasi di browser:
     - URL: `http://localhost:8000`
-
-## Fitur Utama
-
-- **Dashboard Admin**
-  - Manajemen siswa
-  - Manajemen event
-  - Statistik
-
-- **Profil Siswa**
-  - Edit profil
-  - Upload foto profil
-  - Manajemen sosial media
-  - Bio
-
-- **Event**
-  - Daftar event
-  - Detail event
-  - Pendaftaran
-
-- **Responsive Design**
-  - Desktop
-  - Tablet
-  - Mobile
 
 ## Struktur Direktori
 
